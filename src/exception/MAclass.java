@@ -5,13 +5,12 @@ import org.junit.Assert;
 import org.junit.Test;
 public class MAclass {
 
-    @Test
-    public void TestAnalyzeMood() {
-        MoodAnalyser ma = new MoodAnalyser(null);
-        String mood = null;
+	@Test
+    public void TestAnalyzeMood() throws MoodAnalysisException {
+        MoodAnalyser ma = new MoodAnalyser("I am Good");
+        String mood = "Happy";
         Assert.assertThat(mood, CoreMatchers.is(ma.analyzeMood()));
     }
-
 }
 
 
